@@ -21,10 +21,10 @@ get_header();
 			</div>
 			<div id="primary" class="col-md-8 col-lg-9 col-xs-12 content-area mx-auto">
 			<style>
-			img {
+			/* img {
   width: 200px;
   height: auto;
-}
+} */
 </style>
 				<main id="main" class="site-main">
 				<h1>Mød os</h1>
@@ -54,7 +54,6 @@ const skabelon = document.querySelector("template");
 document.addEventListener("DOMContentLoaded", start);
 
 function start() {
-	getJson();
 }
 
 const url = "http://emilieschultz.dk/kea/09_CMS/wp-json/wp/v2/medarbejder";
@@ -62,12 +61,12 @@ async function getJson() {
 	const response = await fetch(url);
 	medarbejdere = await response.json();
 	visMedarbejdere();
-	console.log(medarbejdere)
+	console.log(medarbejdere);
 }
 function visMedarbejdere() {
 	medarbejdere.forEach(medarbejder => {
 		const klon = skabelon.cloneNode(true).content;
-		klon.querySelector("img").src = medarbejder.billede;
+		klon.querySelector("img").src = medarbejder.billede.guid;
 		klon.querySelector("h3").textContent = medarbejder.navn;
 		klon.querySelector(".stilling").textContent = medarbejder.stilling;
 		klon.querySelector(".email").textContent = medarbejder.email;
@@ -75,5 +74,7 @@ function visMedarbejdere() {
 		liste.appendChild(klon);
 	})
 }
+
+getJson();
 </script>
 <?php get_footer();

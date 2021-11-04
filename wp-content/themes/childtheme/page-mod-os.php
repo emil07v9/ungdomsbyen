@@ -28,6 +28,7 @@ get_header();
 </style>
 				<main id="main" class="site-main">
 				<h1>Mød os</h1>
+				<h2>Medarbejdere</h2>
 <section id="medarbejder-oversigt"></section>
 </main>
 <template>
@@ -51,6 +52,7 @@ console.log("Hip hurra");
 let medarbejdere = [];
 const liste = document.querySelector("#medarbejder-oversigt");
 const skabelon = document.querySelector("template");
+let filter = "ja";
 document.addEventListener("DOMContentLoaded", start);
 
 function start() {
@@ -65,13 +67,15 @@ async function getJson() {
 }
 function visMedarbejdere() {
 	medarbejdere.forEach(medarbejder => {
+if (filter == medarbejder.ansat) {
 		const klon = skabelon.cloneNode(true).content;
-		klon.querySelector("img").src = medarbejder.billede.guid;
+		klon.querySelector("img").src = medarbejder.billede;
 		klon.querySelector("h3").textContent = medarbejder.navn;
 		klon.querySelector(".stilling").textContent = medarbejder.stilling;
 		klon.querySelector(".email").textContent = medarbejder.email;
 		klon.querySelector(".telefon").textContent = medarbejder.telefon;
 		liste.appendChild(klon);
+}
 	})
 }
 

@@ -28,19 +28,19 @@ get_header();
 </style>
 				<main id="main" class="site-main">
 				<h1>Mød os</h1>
-				<h2>Medarbejdere</h2>
-<section id="medarbejder-oversigt"></section>
+				<h2>Bestyrelse</h2>
+<section id="bestyrelse-oversigt"></section>
 </main>
-<template>
+<template id="skabelon1">
 	<article>
 	<img src="" alt="">
 	<h3></h3>
 	<p class="stilling"></p>
+	<p class= "kurser"></p>
 	<p class="email"></p>
 	<p class="telefon"></p>
 	</article>
 </template>
-
 				</main><!-- #main -->
 			</div><!-- #primary -->
 			<?php get_sidebar(); ?>
@@ -50,9 +50,9 @@ get_header();
 <script>
 console.log("Hip hurra");
 let medarbejdere = [];
-const liste = document.querySelector("#medarbejder-oversigt");
-const skabelon = document.querySelector("template");
-let filter = "ja";
+const liste = document.querySelector("#bestyrelse-oversigt");
+const skabelon1 = document.querySelector("#skabelon1");
+// let filter = "ja";
 document.addEventListener("DOMContentLoaded", start);
 
 function start() {
@@ -65,17 +65,19 @@ async function getJson() {
 	visMedarbejdere();
 	console.log(medarbejdere);
 }
+
 function visMedarbejdere() {
 	medarbejdere.forEach(medarbejder => {
-if (filter == medarbejder.ansat) {
-		const klon = skabelon.cloneNode(true).content;
+// if (filter == medarbejder.bestyrelse) {
+		const klon = skabelon1.cloneNode(true).content;
 		klon.querySelector("img").src = medarbejder.billede;
 		klon.querySelector("h3").textContent = medarbejder.navn;
 		klon.querySelector(".stilling").textContent = medarbejder.stilling;
+		klon.querySelector(".kurser").textContent = medarbejder.kurser;
 		klon.querySelector(".email").textContent = medarbejder.email;
 		klon.querySelector(".telefon").textContent = medarbejder.telefon;
 		liste.appendChild(klon);
-}
+// }
 	})
 }
 

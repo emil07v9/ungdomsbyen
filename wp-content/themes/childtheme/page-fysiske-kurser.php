@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", start);
 function start() {
 }
 
-const url = "http://emilieschultz.dk/kea/09_CMS/wp-json/wp/v2/kursus";
+const url = "http://emilieschultz.dk/kea/09_CMS/wp-json/wp/v2/kursus/?per_page=100";
 async function getJson() {
 	const response = await fetch(url);
 	kurser = await response.json();

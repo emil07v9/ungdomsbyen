@@ -29,9 +29,9 @@ get_header();
 				<main id="main" class="site-main">
 				<h1>Mød os</h1>
 				<h2>Bestyrelse</h2>
-<section id="bestyrelse-oversigt"></section>
+<section id="medarbejder-oversigt"></section>
 </main>
-<template id="skabelon1">
+<template id="skabelon">
 	<article>
 	<img src="" alt="">
 	<h3></h3>
@@ -50,26 +50,26 @@ get_header();
 <script>
 console.log("Hip hurra");
 let medarbejdere = [];
-const liste = document.querySelector("#bestyrelse-oversigt");
-const skabelon1 = document.querySelector("#skabelon1");
+const liste = document.querySelector("#medarbejder-oversigt");
+const skabelon = document.querySelector("#skabelon");
 // let filter = "ja";
 document.addEventListener("DOMContentLoaded", start);
 
 function start() {
 }
 
-const url = "http://emilieschultz.dk/kea/09_CMS/wp-json/wp/v2/medarbejder";
+const url = "http://emilieschultz.dk/kea/09_CMS/wp-json/wp/v2/medarbejder/?per_page=100";
 async function getJson() {
 	const response = await fetch(url);
 	medarbejdere = await response.json();
-	visMedarbejdere();
-	console.log(medarbejdere);
+	visMedarbejder();
+	console.log(medarbejder);
 }
 
-function visMedarbejdere() {
+function visMedarbejder() {
 	medarbejdere.forEach(medarbejder => {
 // if (filter == medarbejder.bestyrelse) {
-		const klon = skabelon1.cloneNode(true).content;
+		const klon = skabelon.cloneNode(true).content;
 		klon.querySelector("img").src = medarbejder.billede;
 		klon.querySelector("h3").textContent = medarbejder.navn;
 		klon.querySelector(".stilling").textContent = medarbejder.stilling;

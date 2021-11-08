@@ -43,7 +43,6 @@ img {
 
 				</main><!-- #main -->
 			</div><!-- #primary -->
-			<?php get_sidebar(); ?>
 		</div>
 	</div>
 </section>
@@ -74,6 +73,9 @@ function visKurser() {
 		klon.querySelector(".tema").textContent = kursus.kursustema;
 		klon.querySelector(".maalgruppe").textContent = kursus.maalgruppe;
 		klon.querySelector("button");
+		klon.querySelector("article").addEventlistener("click", () => {
+			location.href = "page-singleview.php?id=" + kursus._id;
+		});
 		liste.appendChild(klon);
 		}
 	})

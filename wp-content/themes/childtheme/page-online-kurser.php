@@ -28,8 +28,22 @@ img {
 </style>
 				<main id="main" class="site-main">
 				<h1>Online kurser</h1>
+				<article class="knapper">
+				<nav>
+				<button data-kategori="Alle" class="valgt">Alle</button>
+				<button data-kategori="Grundskole">Grundskole</button>
+				<button data-kategori="Efterskole">Efterskole</button>
+				<button data-kategori="Ungdomsuddannelse">Ungdomsuddannelse</button>
+				<button data-kategori="Undervisere & ledere">Undervisere & ledere</button>
+				<button data-kategori="Kommuner">Kommuner</button>
+				<button data-kategori="FNs 17 Verdensmål">FNs 17 Verdensmål</button>
+				<button data-kategori="Konflikthåndtering">Konflikthåndtering</button>
+				<button data-kategori="LGBTQ+ og normer">LGBTQ+ og normer</button>
+				<button data-kategori="Demokrati og medborgerskab">Demokrati og medborgerskab</button>
+				<button data-kategori="Økonomi">Økonomi</button>
+				<button data-kategori="Uddannelsesvalg">Uddannelsesvalg</button>
+				</nav></article>
 <section id="kursus-oversigt"></section>
-</main>
 <template>
 	<article>
 	<img src="" alt="">
@@ -72,13 +86,25 @@ function visKurser() {
 		klon.querySelector("p").textContent = kursus.kortbeskrivelse;
 		klon.querySelector(".tema").textContent = kursus.kursustema;
 		klon.querySelector(".maalgruppe").textContent = kursus.maalgruppe;
-		klon.querySelector("button");
-		klon.querySelector("article").addEventlistener("click", () => {
-			location.href = "page-singleview.php?id=" + kursus._id;
-		});
+		klon.querySelector("button").addEventListener("click", ()=> {
+			location.href = kursus.link;
+		})
 		liste.appendChild(klon);
 		}
 	})
+}
+
+function start () {
+ const filterKnapper = document.querySelectorAll(".knapper nav button");
+ filterKnapper.forEach((knap)=> knap.addEventListener("click", filtrerKurser));
+getJson();
+}
+
+function filtrerKurser() {
+	filter = this.dataset.kategori;
+	document.querySelector(".valgt").classList.remove("valgt");
+	this.classList.add("valgt");
+	visKurser();
 }
 
 getJson();

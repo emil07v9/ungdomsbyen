@@ -28,8 +28,15 @@ get_header();
 </style>
 				<main id="main" class="site-main">
 				<h1>Fysiske kurser</h1>
-				<article class="knapper">
-				<nav>
+				<div id="dropdown" class="dropdown">
+				<button class="dropbtn" class="filter">Målgruppe</button>
+				<div class="dropdown-content">
+				<nav id="filtrering">
+				</nav>
+				</div>
+				</div>
+
+<!-- <article class="knapper">
 				<button data-kategori="Alle" class="valgt">Alle</button>
 				<button data-kategori="Grundskole">Grundskole</button>
 				<button data-kategori="Efterskole">Efterskole</button>
@@ -42,9 +49,8 @@ get_header();
 				<button data-kategori="Demokrati og medborgerskab">Demokrati og medborgerskab</button>
 				<button data-kategori="Økonomi">Økonomi</button>
 				<button data-kategori="Uddannelsesvalg">Uddannelsesvalg</button>
-				</nav></article>
+				</nav></article> -->
 <section id="kursus-oversigt"></section>
-</main>
 <template>
 	<article>
 	<img src="" alt="">
@@ -79,6 +85,7 @@ async function getJson() {
 	console.log(kurser)
 }
 function visKurser() {
+	
 	kurser.forEach(kursus => {
 		if (filter == kursus.fysisk || filtrering == kursus.kursustema || filtrering == kursus.maalgruppe) {
 		const klon = skabelon.cloneNode(true).content;
@@ -87,10 +94,8 @@ function visKurser() {
 		klon.querySelector("p").textContent = kursus.kortbeskrivelse;
 		klon.querySelector(".tema").textContent = kursus.kursustema;
 		klon.querySelector(".maalgruppe").textContent = kursus.maalgruppe;
-		klon.querySelector("button");
-		klon.querySelector("article").addEventlistener("click", () => {
-			location.href = "page-singleview.php?id=" + kursus._id;
-		});
+		klon.querySelector("button").addEventListener("click", ()=>{location.href = kursus.link;
+		})
 		liste.appendChild(klon);
 		}
 	});
@@ -98,7 +103,7 @@ function visKurser() {
 
 function start () {
  const filterKnapper = document.querySelectorAll(".knapper nav button");
- filterKnapper.forEach((knap)=> knap.addEventlistener("click", filtrerKurser));
+ filterKnapper.forEach((knap)=> knap.addEventListener("click", filtrerKurser));
 getJson();
 }
 

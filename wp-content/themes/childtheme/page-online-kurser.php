@@ -71,7 +71,7 @@ console.log("Hip hurra");
 let kurser = [];
 const liste = document.querySelector("#kursus-oversigt");
 const skabelon = document.querySelector("template");
-let filter = "nej";
+let filterKursus = "nej";
 document.addEventListener("DOMContentLoaded", start);
 
 function start() {
@@ -85,7 +85,7 @@ async function getJson() {
 }
 function visKurser() {
 	kurser.forEach(kursus => { 
-		if (filter == kursus.fysisk) {
+		if (filterKursus == kursus.fysisk) {
 		const klon = skabelon.cloneNode(true).content;
 		klon.querySelector("img").src = kursus.oversigtsbillede.guid;
 		klon.querySelector("h2").textContent = kursus.kursustitel;

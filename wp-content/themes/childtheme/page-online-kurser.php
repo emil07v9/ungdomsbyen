@@ -45,13 +45,19 @@ img {
 				</nav></article>
 <section id="kursus-oversigt"></section>
 <template>
-	<article>
+	<article class="online_kurser">
+	<div class="column1">
 	<img src="" alt="">
+	</div>
+	<div class="column2">
 		<h2></h2>
 		<p></p>
+		</div>
+		<div class="column3">
 		<h4 class="tema"></h4>
 		<h4 class="maalgruppe"></h4>
 		<button>Læs mere</button>
+		</div>
 	</article>
 </template>
 

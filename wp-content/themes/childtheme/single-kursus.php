@@ -19,22 +19,35 @@ get_header();
 				</div>
 			</div>
 			<div id="primary" class="col-md-8 col-lg-9 col-xs-12 content-area mx-auto">
+<style>
+	@media (min-width: 1000px) {
+.content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+	}
+</style>
 				<main id="main" class="site-main">
 <div id="tilbage_knap">
 <button class="tilbage">Tilbage</button>
 </div>
 
 <!-- Singleview restAPI start -->
-<section>
 <article id="single_liste">
-<h1 class="overskrift"></h1>
+	<h1 class="overskrift"></h1>
+	<section class="content">
+	<div class="element1">
 <p class="tekst1"></p>
 <button class="book_kursus">Book kursus</button>
-<figure class="billede1">
-<img src="" alt=""></figure>
+</div>
+<div class="element2">
+<figure>
+<img class="billede1" src="" alt=""></figure>
+</div>
 
 <!-- Infoboks -->
-<div class="infoboks">
+
+<div class="element3">
 <h3>Kursusinformation</h3>
 <ul>
 <li class="varighed"></li>
@@ -46,26 +59,38 @@ get_header();
 </div>
 
 <!-- Tekster -->
+<div class="element4">
 <h2 class="titel2"></h2>
 <p class="tekst2"></p>
+</div>
+<div class="element5">
 <h2 class="titel3"></h2>
 <p class="tekst3"></p>
+</div>
+<div class="element6">
 <h2 class="titel4"></h2>
 <p class="tekst4"></p>
+</div>
+<div class="element7">
 <h2 class="titel5"></h2>
 <p class="tekst5"></p>
+</div>
 
 <!-- Booking og kontakt -->
+<div class="element8">
 <h2>Booking og kontakt</h2>
-<figure class="bookingboks"></figure>
+<figure class="bookingboks">hej</figure>
+</div>
+<div class="element9">
 <div class="kontaktinfo">
 <p class="navn"></p>
 <p class="mail"></p>
 <p class="telefon"></p>
 </div>
-<figure class="billede2">
-<img src="" alt=""></figure>
+<figure>
+<img class="billede2" src="" alt=""></figure>
 <h4 class="stilling"></h4>
+</div>
 </article>
 </section>
 

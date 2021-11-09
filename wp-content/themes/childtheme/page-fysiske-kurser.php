@@ -20,13 +20,8 @@ get_header();
 				<?php do_action('markup_breadcrumb_options_hook'); ?> <!-- Breadcrumb hook -->
 			</div>
 			<div id="primary" class="col-md-8 col-lg-9 col-xs-12 content-area mx-auto">
-			<style>
-			img {
-  width: 200px;
-  height: auto;
-}
-</style>
-				<main id="main" class="site-main">
+			
+				<!-- <main id="main" class="site-main">
 				<h1>Fysiske kurser</h1>
 				<div id="dropdown" class="dropdown">
 				<button class="dropbtn" class="filter">Målgruppe</button>
@@ -34,7 +29,7 @@ get_header();
 				<nav id="filtrering">
 				</nav>
 				</div>
-				</div>
+				</div> -->
 
 <!-- <article class="knapper">
 				<button data-kategori="Alle" class="valgt">Alle</button>
@@ -52,13 +47,19 @@ get_header();
 				</nav></article> -->
 <section id="kursus-oversigt"></section>
 <template>
-	<article>
+	<article class="fysiske_kurser">
+	<div class="column1">
 	<img src="" alt="">
+	</div>
+		<div class="column2">
 		<h2></h2>
 		<p></p>
+		</div>
+		<div class="column3">
 		<h4 class="tema"></h4>
 		<h4 class="maalgruppe"></h4>
 		<button>Læs mere</button>
+		</div>
 	</article>
 </template>
 

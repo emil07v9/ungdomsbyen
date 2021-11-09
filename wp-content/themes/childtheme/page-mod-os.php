@@ -70,7 +70,7 @@ function visMedarbejder() {
 	medarbejdere.forEach(medarbejder => {
 // if (filter == medarbejder.bestyrelse) {
 		const klon = skabelon.cloneNode(true).content;
-		klon.querySelector("img").src = medarbejder.billede;
+		klon.querySelector("img").src = medarbejder.billede.guid;
 		klon.querySelector("h3").textContent = medarbejder.navn;
 		klon.querySelector(".stilling").textContent = medarbejder.stilling;
 		klon.querySelector(".kurser").textContent = medarbejder.kurser;

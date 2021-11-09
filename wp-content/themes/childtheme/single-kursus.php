@@ -98,14 +98,15 @@ get_header();
 
 <script>
 let kursus;
-const Url = "http://emilieschultz.dk/kea/09_CMS/wp-json/wp/v2/kursus/"+<?php echo get_the_ID() ?>;
+const Url = "https://emilieschultz.dk/kea/09_CMS/wp-json/wp/v2/kursus/"+<?php echo get_the_ID() ?>;
 
 document.addEventListener("DOMContentLoaded", getJson);
 async function getJson() {
 	const response = await fetch(Url);
 	kursus = await response.json();
-	visKursus();
 	console.log(kursus);
+	visKursus();
+	
 }
 
 function visKursus() {

@@ -112,7 +112,5 @@ function filtrerKurser() {
 	this.classList.add("valgt");
 	visKurser();
 }
-
-getJson();
 </script>
 <?php get_footer();

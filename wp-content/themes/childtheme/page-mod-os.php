@@ -13,6 +13,21 @@
  */
 get_header();
 ?>
+<style>
+article {
+	max-width: 500px;
+	margin: 2rem;
+	box-shadow: 10px 10px 17px -9px #888888;
+}
+
+@media (min-width: 1000px) {
+#medarbejder-oversigt {
+display: grid;
+grid-template-columns: 1fr 1fr;
+	}
+}
+
+</style>
 <section id="content" class="site-content posts-container">
     <div class="container">
         <div class="row">
@@ -20,19 +35,11 @@ get_header();
 				<?php do_action('markup_breadcrumb_options_hook'); ?> <!-- Breadcrumb hook -->
 			</div>
 			<div id="primary" class="col-md-8 col-lg-9 col-xs-12 content-area mx-auto">
-			<style>
-			/* img {
-  width: 200px;
-  height: auto;
-} */
-</style>
 				<main id="main" class="site-main">
 				<h1>Mød os</h1>
-				<h2>Bestyrelse</h2>
 <section id="medarbejder-oversigt"></section>
-</main>
 <template id="skabelon">
-	<article>
+	<article class="mod_os">
 	<img src="" alt="">
 	<h3></h3>
 	<p class="stilling"></p>

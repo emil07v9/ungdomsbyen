@@ -87,7 +87,28 @@ get_header();
 	main{
 		margin-bottom: 20rem;
 	}
+
+	#introtekst p {
+	margin: 1rem;
+}
+
+.fysiske_kurser {
+border: 1px solid black;
+}
 	
+@media (min-width: 1000px) {
+	.fysiske_kurser {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	margin: 1rem;
+}
+
+#introtekst {
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+}
 </style>
 
 <section id="content" class="site-content posts-container">
@@ -100,8 +121,12 @@ get_header();
 
 				<main id="main" class="site-main">
 				<h1>Fysiske kurser</h1>
+<section id="introtekst">
+<p>Ungdomsbyen har i flere år lavet fysiske kurser for både lærere og elever. Nu har vi taget det bedste fra vores kurser og lavet webinar og workshops online.</p>
+<p>Herunder ser du vores udvalg af online kurser. Scroll ned for at se alle udbud af kurser eller brug vores filtrering til at finde det helt perfekte kursus for dig.</p>
+</section>
 
-				<!-- DROPDOWNS -->
+			<!-- DROPDOWNS -->
 				<div id="dropdown_maalgruppe" class="dropdown">
 				<button class="dropbtn">Målgruppe</button>
 				<div class="dropdown-content1">

@@ -14,6 +14,10 @@
 get_header();
 ?>
 <style>
+	.valgt{
+		background-color: #8FCAF6;
+	}
+	
 .dropbtn, button {
 	background-color; #04AA6D;
 	color: white;
@@ -78,6 +82,12 @@ get_header();
 .dropdown:hover .dropbtn {
 	background-color: #3e8e41;
 	}
+	
+/* Vis hele filtreringsmenu */
+	main{
+		margin-bottom: 20rem;
+	}
+	
 </style>
 
 <section id="content" class="site-content posts-container">
@@ -165,20 +175,18 @@ async function getJson() {
 	tema = await temaResponse.json();
 	maalgruppe = await maalResponse.json();
 	visKurser();
-	console.log(kurser);
+	console.log(tema);
 	opretKnapper();
 }
 
 function opretKnapper(){
             
             tema.forEach(tem=>{
-				console.log(tem.id);
                 if(tem.name != "Uncategorized"){
                 document.querySelector(".dropdown-content2").innerHTML += `<button class="filter" data-tema="${tem.id}">${tem.name}</button>`
                 }
             })
               maalgruppe.forEach(maal=>{
-				  console.log(maal.id);
                 document.querySelector(".dropdown-content1").innerHTML += `<button class="filter" data-maal="${maal.id}">${maal.name}</button>`
              
             })
@@ -186,9 +194,10 @@ function opretKnapper(){
         }
 
 		function visKurser() {
+			liste.textContent = "";
 			kurser.forEach(kursus => {
 				if (filterKursus == kursus.fysisk) {
-				if ((filterTema == "alle" || kursus.tema.includes(parseInt(filterTema))) && (filterMaalgruppe == "alle" || kursus.maalgruppe.includes(parseInt(filterMaalgruppe)))) {
+				if ((filterTema === "alle" || kursus.tema.includes(parseInt(filterTema))) && (filterMaalgruppe === "alle" || kursus.maalgruppe.includes(parseInt(filterMaalgruppe)))) {
 				const klon = skabelon.cloneNode(true).content;
 				klon.querySelector("img").src = kursus.oversigtsbillede.guid;
 				klon.querySelector("h2").textContent = kursus.kursustitel;
@@ -224,12 +233,11 @@ function filtreringTema() {
 	//tilføj .valgt til den valgte
 	this.classList.add("valgt");
 	visKurser();
-
-	console.log("line");
 }
 
 function filtreringMaalgruppe() {
-	filterMaalgruppe = this.dataset.maalgruppe;
+	filterMaalgruppe = this.dataset.maal;
+	console.log(filterMaalgruppe)
 	//fjern .valgt fra alle
 	document.querySelectorAll(".dropdown-content1 .filter").forEach(elm => {
 		elm.classList.remove("valgt");
@@ -238,8 +246,6 @@ function filtreringMaalgruppe() {
 	//tilføj .valgt til den valgte
 	this.classList.add("valgt");
 	visKurser();
-
-	console.log("emilie");
 }
 </script>
 <?php get_footer();

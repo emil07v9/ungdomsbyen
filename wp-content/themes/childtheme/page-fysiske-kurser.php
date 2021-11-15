@@ -14,29 +14,32 @@
 get_header();
 ?>
 <style>
-	.valgt{
-		background-color: #8FCAF6;
+/* NYT */
+.valgt{
+		background-color: #7184AB;
 	}
 	
 .dropbtn, button {
-	background-color; #04AA6D;
+	background-color: #415079;
 	color: white;
 	padding: 16px;
 	font-size: 16px;
 	border: none;
+	cursor: pointer;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content1, .dropdown-content2 {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #7184AB;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -44,7 +47,7 @@ get_header();
 
 /* Links inside the dropdown */
 .dropdown-content1 button {
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -52,7 +55,7 @@ get_header();
 }
 
 .dropdown-content2 button {
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -61,11 +64,12 @@ get_header();
 
 /* Change color of dropdown links on hover */
 .dropdown-content1 button:hover{
-	background-color: #ddd;
-	}
+	background-color: #7184AB;
 
-	.dropdown-content2 button:hover{
-	background-color: #ddd;
+}
+
+.dropdown-content2 button:hover{
+	background-color: #7184AB;
 	}
 
 
@@ -80,9 +84,17 @@ get_header();
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-	background-color: #3e8e41;
+	background-color: #7184AB;
 	}
-	
+
+.læs_mere {
+	border-radius: 12px;
+}
+
+.læs_mere:hover {
+background-color: #7184AB;
+}
+
 /* Vis hele filtreringsmenu */
 	main{
 		margin-bottom: 20rem;
@@ -100,7 +112,6 @@ border: 1px solid black;
 	.fysiske_kurser {
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
-	margin: 1rem;
 }
 
 #introtekst {
@@ -120,7 +131,7 @@ grid-template-columns: 1fr 1fr;
 			<div id="primary" class="col-md-8 col-lg-9 col-xs-12 content-area mx-auto">
 
 				<main id="main" class="site-main">
-				<h1>Fysiske kurser</h1>
+				<h1>FYSISKE KURSER</h1>
 <section id="introtekst">
 <p>Ungdomsbyen har i flere år lavet fysiske kurser for både lærere og elever. Nu har vi taget det bedste fra vores kurser og lavet webinar og workshops online.</p>
 <p>Herunder ser du vores udvalg af online kurser. Scroll ned for at se alle udbud af kurser eller brug vores filtrering til at finde det helt perfekte kursus for dig.</p>
@@ -155,7 +166,7 @@ grid-template-columns: 1fr 1fr;
 		<div class="column3">
 		<h4 class="tema"></h4>
 		<h4 class="maalgruppe"></h4>
-		<button>Læs mere</button>
+		<button class="læs_mere">Læs mere</button>
 		</div>
 	</article>
 </template>

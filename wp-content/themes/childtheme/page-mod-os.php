@@ -20,6 +20,27 @@ article {
 	box-shadow: 10px 10px 17px -9px #888888;
 }
 
+.tilbage {
+	background-color: #415079;
+	color: white;
+	padding-left: 2rem;
+	padding-top: 1rem;
+	padding-right: 2rem;
+	padding-bottom: 1rem;
+	border-radius: 12px;
+	text-decoration: underline;
+	border: none;
+}
+
+.tilbage:hover {
+	background-color: #7184AB;
+	color: white;
+}
+
+#first {
+	margin-bottom: 3rem;
+}
+
 @media (min-width: 1000px) {
 #medarbejder-oversigt {
 display: grid;
@@ -36,6 +57,9 @@ grid-template-columns: 1fr 1fr;
 			</div>
 			<div id="primary" class="col-md-8 col-lg-9 col-xs-12 content-area mx-auto">
 				<main id="main" class="site-main">
+				<section id="first">
+				<a href="http://emilieschultz.dk/kea/09_CMS/kontakt-os/" class="tilbage">TILBAGE</a>
+				</section>
 				<h1>MØD OS</h1>
 <section id="medarbejder-oversigt"></section>
 <template id="skabelon">

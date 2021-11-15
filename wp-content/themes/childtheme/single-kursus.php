@@ -20,17 +20,36 @@ get_header();
 			</div>
 			<div id="primary" class="col-md-8 col-lg-9 col-xs-12 content-area mx-auto">
 <style>
+button {
+	background-color: #415079;
+	color: white;
+	padding-left: 2rem;
+	padding-top: 1rem;
+	padding-right: 2rem;
+	padding-bottom: 1rem;
+	border-radius: 12px;
+	text-decoration: underline;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 1rem;
+}
+
+button:hover {
+background-color: #7184AB;
+}
+
 	@media (min-width: 1000px) {
 .content {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	grid-gap: 1rem;
 }
 	}
 </style>
 				<main id="main" class="site-main">
-<div id="tilbage_knap">
-<button class="tilbage">Tilbage</button>
-</div>
+<section id="tilbage_knap">
+<button class="tilbage">TILBAGE</button>
+</section>
 
 <!-- Singleview restAPI start -->
 <article id="single_liste">
@@ -38,7 +57,7 @@ get_header();
 	<section class="content">
 	<div class="element1">
 <p class="tekst1"></p>
-<button class="book_kursus">Book kursus</button>
+<button class="book_kursus">BOOK KURSUS</button>
 </div>
 <div class="element2">
 <figure>

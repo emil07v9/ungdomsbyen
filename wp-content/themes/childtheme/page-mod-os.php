@@ -36,11 +36,11 @@ grid-template-columns: 1fr 1fr;
 			</div>
 			<div id="primary" class="col-md-8 col-lg-9 col-xs-12 content-area mx-auto">
 				<main id="main" class="site-main">
-				<h1>Mød os</h1>
+				<h1>MØD OS</h1>
 <section id="medarbejder-oversigt"></section>
 <template id="skabelon">
 	<article class="mod_os">
-	<img src="" alt="">
+	<img src="" alts="">
 	<h3></h3>
 	<p class="stilling"></p>
 	<p class= "kurser"></p>

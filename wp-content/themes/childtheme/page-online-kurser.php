@@ -123,7 +123,7 @@ grid-template-columns: 1fr 1fr;
 			</div>
 			<div id="primary" class="col-md-8 col-lg-9 col-xs-12 content-area mx-auto">
 				<main id="main" class="site-main">
-				<h1>Online kurser</h1>
+				<h1>ONLINE KURSER</h1>
 <section id="introtekst">
 <p>Ungdomsbyen har i flere år lavet fysiske kurser for både lærere og elever. Nu har vi taget det bedste fra vores kurser og lavet webinar og workshops online.</p>
 <p>Herunder ser du vores udvalg af online kurser. Scroll ned for at se alle udbud af kurser eller brug vores filtrering til at finde det helt perfekte kursus for dig.</p>

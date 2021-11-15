@@ -37,10 +37,6 @@ article {
 	color: white;
 }
 
-#first {
-	margin-bottom: 3rem;
-}
-
 @media (min-width: 1000px) {
 #medarbejder-oversigt {
 display: grid;

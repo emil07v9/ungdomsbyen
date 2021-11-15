@@ -98,7 +98,7 @@ background-color: #7184AB;
 <!-- Booking og kontakt -->
 <div class="element8">
 <h2>Booking og kontakt</h2>
-<figure class="bookingboks">hej</figure>
+<img class="bookingboks"></img>
 </div>
 <div class="element9">
 <div class="kontaktinfo">
@@ -145,6 +145,7 @@ document.querySelector(".titel4").textContent = kursus.tekst_4_titel;
 document.querySelector(".tekst4").textContent = kursus.tekst_4;
 document.querySelector(".titel5").textContent = kursus.tekst_5_titel;
 document.querySelector(".tekst5").textContent = kursus.tekst_5;
+document.querySelector(".bookingboks").src = kursus.booking_boks.guid;
 document.querySelector(".navn").textContent = kursus.kontakt_navn;
 document.querySelector(".mail").textContent = kursus.kontakt_mail;
 document.querySelector(".telefon").textContent = kursus.kontakt_telefon;

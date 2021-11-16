@@ -43,7 +43,7 @@ get_header();
   background-color: #7184AB;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 100;
 }
 
 /* Links inside the dropdown */
@@ -98,7 +98,7 @@ background-color: #7184AB;
 
 /* Vis hele filtreringsmenu */
 	main{
-		margin-bottom: 20rem;
+		margin-bottom: 5rem;
 	}
 
 	#introtekst p {
@@ -115,6 +115,13 @@ box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.35);
 
 img {
 	padding-top: 1rem;
+}
+
+.posts-container {
+    margin-top: 60px;
+    overflow: visible;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 	
 @media (min-width: 1000px) {
@@ -153,14 +160,14 @@ grid-template-columns: 1fr 1fr;
 
 			<!-- DROPDOWNS -->
 				<div id="dropdown_maalgruppe" class="dropdown">
-				<button class="dropbtn">Målgruppe</button>
+				<button class="dropbtn">Målgruppe v</button>
 				<div class="dropdown-content1">
 				<button class="valgt" data-maal="alle">Alle</button>
 				</div>
 				</div>
 
 				<div id="dropdown_tema" class="dropdown">
-				<button class="dropbtn">Tema</button>
+				<button class="dropbtn">Tema v</button>
 				<div class="dropdown-content2">
 				<button class="valgt" data-tema="alle">Alle</button>
 				</div>

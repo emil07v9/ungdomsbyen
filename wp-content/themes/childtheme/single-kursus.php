@@ -38,13 +38,21 @@ button:hover {
 background-color: #7184AB;
 }
 
-	@media (min-width: 1000px) {
-.content {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 1rem;
-}
+	#element8 .navn{
+		font-weight: bold;
 	}
+
+@media (min-width: 1000px) {
+	#single_liste{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1rem;
+	}
+	
+	h1, #element6{
+		grid-column: 1/3;
+	}
+}
 </style>
 				<main id="main" class="site-main">
 <section id="tilbage_knap">
@@ -54,64 +62,63 @@ background-color: #7184AB;
 <!-- Singleview restAPI start -->
 <article id="single_liste">
 	<h1 class="overskrift"></h1>
-	<section class="content">
-	<div class="element1">
-<p class="tekst1"></p>
-<button class="book_kursus">BOOK KURSUS</button>
-</div>
-<div class="element2">
-<figure>
-<img class="billede1" src="" alt=""></figure>
-</div>
+	
+		
+<article id="element1">
+	<p class="tekst1"></p>
+	<button class="book_kursus">BOOK KURSUS</button>
+</article>
+		
+<article id="element2">
+	<figure>
+	<img class="billede1" src="" alt=""></figure>
+</article>
 
 <!-- Infoboks -->
 
-<div class="element3">
-<h3>Kursusinformation</h3>
-<ul>
-<li class="varighed"></li>
-<li class="deltagere"></li>
-<li class="indhold"></li>
-<li class="pris"></li>
-<li class="fag"></li>
-</ul>
-</div>
+<article id="element3">
+	<h3>Kursusinformation</h3>
+	<ul>
+	<li class="varighed"></li>
+	<li class="deltagere"></li>
+	<li class="indhold"></li>
+	<li class="pris"></li>
+	<li class="fag"></li>
+	</ul>
+</article>
 
 <!-- Tekster -->
-<div class="element4">
-<h2 class="titel2"></h2>
-<p class="tekst2"></p>
-</div>
-<div class="element5">
-<h2 class="titel3"></h2>
-<p class="tekst3"></p>
-</div>
-<div class="element6">
-<h2 class="titel4"></h2>
-<p class="tekst4"></p>
-</div>
-<div class="element7">
-<h2 class="titel5"></h2>
-<p class="tekst5"></p>
-</div>
+<article id="element4">
+	<h2 class="titel2"></h2>
+	<p class="tekst2"></p>
+</article>
+		
+<article id="element5">
+	<h2 class="titel3"></h2>
+	<p class="tekst3"></p>
+</article>
 
 <!-- Booking og kontakt -->
-<div class="element8">
-<h2>Booking og kontakt</h2>
-<img class="bookingboks"></img>
-</div>
-<div class="element9">
-<div class="kontaktinfo">
-<p class="navn"></p>
-<p class="mail"></p>
-<p class="telefon"></p>
-</div>
-<figure>
-<img class="billede2" src="" alt=""></figure>
-<h4 class="stilling"></h4>
-</div>
+<article id="element6">
+	<h2>Booking og kontakt</h2>
+	<img class="bookingboks">
 </article>
-</section>
+	
+<article id="element7">
+	<figure>
+	<img class="billede2" src="" alt=""></figure>
+</article>
+
+<article id="element8">
+		<h4 class="overskrift">Brug for yderligere kontakt?</h4>
+		<p class="navn"></p>
+		<p class="stilling"></p>
+		<p class="mail"></p>
+		<p class="telefon"></p>
+</article>
+
+					
+</article>
 
 
 
@@ -141,10 +148,6 @@ document.querySelector(".titel2").textContent = kursus.tekst_2_titel;
 document.querySelector(".tekst2").textContent = kursus.tekst_2;
 document.querySelector(".titel3").textContent = kursus.tekst_3_titel;
 document.querySelector(".tekst3").textContent = kursus.tekst_3;
-document.querySelector(".titel4").textContent = kursus.tekst_4_titel;
-document.querySelector(".tekst4").textContent = kursus.tekst_4;
-document.querySelector(".titel5").textContent = kursus.tekst_5_titel;
-document.querySelector(".tekst5").textContent = kursus.tekst_5;
 document.querySelector(".bookingboks").src = kursus.booking_boks.guid;
 document.querySelector(".navn").textContent = kursus.kontakt_navn;
 document.querySelector(".mail").textContent = kursus.kontakt_mail;

@@ -19,6 +19,7 @@ get_header();
 		background-color: #7184AB;
 	}
 	
+
 .dropbtn, button {
 	background-color: #415079;
 	color: white;
@@ -120,7 +121,7 @@ img {
 	.fysiske_kurser {
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
-	margin: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 img {

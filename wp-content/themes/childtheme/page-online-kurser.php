@@ -99,13 +99,12 @@ background-color: #7184AB;
 		margin-bottom: 20rem;
 	}
 
-	img {
-  width: 200px;
-  height: auto;
-}
-
 #introtekst p {
 	margin: 1rem;
+}
+
+.column3 {
+	padding-bottom: 1rem;
 }
 
 .online_kurser {
@@ -120,7 +119,7 @@ img {
 	.online_kurser {
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
-	margin: 1.5 rem;
+	margin-bottom: 1.5rem;
 }
 
 img {

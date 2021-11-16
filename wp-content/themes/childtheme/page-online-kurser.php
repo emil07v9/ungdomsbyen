@@ -109,14 +109,22 @@ background-color: #7184AB;
 }
 
 .online_kurser {
-border: 1px solid black;
+box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.35);
+}
+
+img {
+	padding-top: 1rem;
 }
 
 @media (min-width: 1000px) {
 	.online_kurser {
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
-	margin: 1rem;
+	margin: 1.5 rem;
+}
+
+img {
+	padding-top: 0rem;
 }
 
 #introtekst {

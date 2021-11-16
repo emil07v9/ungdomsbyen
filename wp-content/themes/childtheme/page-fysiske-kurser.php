@@ -105,13 +105,26 @@ background-color: #7184AB;
 }
 
 .fysiske_kurser {
-border: 1px solid black;
+box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.35);
+}
+
+.column3 {
+	padding-bottom: 1rem;
+}
+
+img {
+	padding-top: 1rem;
 }
 	
 @media (min-width: 1000px) {
 	.fysiske_kurser {
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
+	margin: 1.5rem;
+}
+
+img {
+	padding-top: 0rem;
 }
 
 #introtekst {

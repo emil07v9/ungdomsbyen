@@ -15,12 +15,13 @@ get_header();
 ?>
 <style>
 	.valgt{
-		background-color: #7184AB;
+		background-color: #3D517D;
+		color: #FCFAF5;
 	}
 	
 .dropbtn, button {
-	background-color: #415079;
-	color: white;
+	background-color: #FCFAF5;
+	color: #3D517D;
 	padding: 16px;
 	font-size: 16px;
 	border: none;
@@ -38,7 +39,7 @@ get_header();
 .dropdown-content1, .dropdown-content2 {
   display: none;
   position: absolute;
-  background-color: #7184AB;
+  background-color: #FCFAF5;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -46,7 +47,6 @@ get_header();
 
 /* Links inside the dropdown */
 .dropdown-content1 button {
-  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -54,7 +54,6 @@ get_header();
 }
 
 .dropdown-content2 button {
-  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -63,12 +62,14 @@ get_header();
 
 /* Change color of dropdown links on hover */
 .dropdown-content1 button:hover{
-	background-color: #7184AB;
+	background-color: #3D517D;
+	color: #FCFAF5;
 
 }
 
 	.dropdown-content2 button:hover{
-	background-color: #7184AB;
+	background-color: #3D517D;
+	color: #FCFAF5;
 	}
 
 
@@ -83,15 +84,23 @@ get_header();
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-	background-color: #7184AB;
+	background-color: #3D517D;
+	color: #FCFAF5;
 	}
 
 .læs_mere {
 	border-radius: 12px;
+	background-color: #3D517D;
+	color: #FCFAF5;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
 }
 
 .læs_mere:hover {
 background-color: #7184AB;
+color: #FCFAF5;
 }
 	
 /* Vis hele filtreringsmenu */
@@ -116,10 +125,8 @@ img {
 }
 
 .posts-container {
-    margin-top: 60px;
     overflow: visible;
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
+
 }
 
 @media (min-width: 1000px) {
@@ -155,14 +162,14 @@ grid-template-columns: 1fr 1fr;
 </section>
 <!-- DROPDOWNS -->
 				<div id="dropdown_maalgruppe" class="dropdown">
-				<button class="dropbtn">Målgruppe</button>
+				<button class="dropbtn">Målgruppe v</button>
 				<div class="dropdown-content1">
 				<button class="valgt" data-maal="alle">Alle</button>
 				</div>
 				</div>
 
 				<div id="dropdown_tema" class="dropdown">
-				<button class="dropbtn">Tema</button>
+				<button class="dropbtn">Tema v</button>
 				<div class="dropdown-content2">
 				<button class="valgt" data-tema="alle">Alle</button>
 				</div>
@@ -180,8 +187,8 @@ grid-template-columns: 1fr 1fr;
 		</div>
 		<div class="column3">
 		<h4 class="tema"></h4>
-		<h4 class="maalgruppe"></h4>
-		<button class="læs_mere">Læs mere</button>
+		<h5 class="maalgruppe"></h5>
+		<button class="læs_mere">LÆS MERE</button>
 		</div>
 	</article>
 </template>

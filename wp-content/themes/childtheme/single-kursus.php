@@ -34,12 +34,20 @@ button {
 	margin-bottom: 1rem;
 }
 
+article {
+	margin-bottom: 3rem;
+}
+
 button:hover {
 background-color: #7184AB;
 }
 
 	#element8 .navn{
 		font-weight: bold;
+	}
+
+	.bookingboks2 {
+		display: none;
 	}
 
 @media (min-width: 1000px) {
@@ -51,6 +59,14 @@ background-color: #7184AB;
 	
 	h1, #element6{
 		grid-column: 1/3;
+	}
+
+	.bookingboks1 {
+		display: none;
+	}
+
+	.bookingboks2 {
+		display: inline;
 	}
 }
 </style>
@@ -101,12 +117,14 @@ background-color: #7184AB;
 <!-- Booking og kontakt -->
 <article id="element6">
 	<h2>Booking og kontakt</h2>
-	<img class="bookingboks">
+	<img class="bookingboks1" src="kalender_booking_lille" alt="kalender">
+	<img class="bookingboks2" src="kalender_booking" alt="kalender">
 </article>
 	
 <article id="element7">
 	<figure>
-	<img class="billede2" src="" alt=""></figure>
+	<img class="billede2" src="" alt="">
+	</figure>
 </article>
 
 <article id="element8">
@@ -148,7 +166,7 @@ document.querySelector(".titel2").textContent = kursus.tekst_2_titel;
 document.querySelector(".tekst2").textContent = kursus.tekst_2;
 document.querySelector(".titel3").textContent = kursus.tekst_3_titel;
 document.querySelector(".tekst3").textContent = kursus.tekst_3;
-document.querySelector(".bookingboks").src = kursus.booking_boks.guid;
+// document.querySelector(".bookingboks").src = kursus.booking_boks.guid;
 document.querySelector(".navn").textContent = kursus.kontakt_navn;
 document.querySelector(".mail").textContent = kursus.kontakt_mail;
 document.querySelector(".telefon").textContent = kursus.kontakt_telefon;

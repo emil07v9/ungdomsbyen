@@ -88,7 +88,8 @@ p {
 				<article class="intro">
 				<p>Ungdomsbyen består af et stærkt hold af både nye og erfarne kræfter. Vi hylder mangfoldighed uanset alder, køn, race, etnicitet, seksuel orientering, funktionsvariationer, m.m. Her på siden finder du information på alle vores nuværende medarbejdere.
 
-Udover Ungdomsbyens medarbejdere kan du også her finde bestyrelsen. Bestyrelsen består af repræsentanter af Ungdomsbyens interessentkreds og nedsættes for et år ad gangen. Disse kan du genkende ved de grønne billeder.
+Udover Ungdomsbyens medarbejdere kan du også her finde bestyrelsen. </p>
+<p>Bestyrelsen består af repræsentanter af Ungdomsbyens interessentkreds og nedsættes for et år ad gangen. Disse kan du genkende ved de grønne billeder.
 
 Ligger du inde med spørgsmål til nogle af disse, skal du ikke tøve med at kontakte. Vi sidder klar til at hjælpe og vejlede.</p>
 </article>
